@@ -1,76 +1,96 @@
-
-/* fondo de color gradiente */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     display: flex;
-    background: linear-gradient(#C3F0FE 15%, #5A58D2 60%, #001CAE 95%);
-    flex-direction: column;
-    align-items: center;
-}
-header {
-    display: flex;
-    border: 1px solid black;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.Logo_Clima {
-    border: solid 2px black;
-    display: inline-block;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    align-self: center;
-
-}
-
-
-.title {
-    color:white;
-    display: block;
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.Lugares {
-    display: block;
-}
-
-
-.Lugares ul {
-list-style: none;
-padding: 0%;
-}
-
-
-.Lugares ul li  {
-    display: flex;
-    border-radius: 10px;
-    width: 308px;
-    height: 107px;
-    border: black solid 1px;
-    text-align: left;
     align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(to bottom, #83e9fe, #5EA4A9);
+     */
+    background: wheat;
+  }
+  
+.mainDiv {
+    display: flex;
+}
+
+  .forecast ul li {
+    display: flex;
+    list-style-type: none;
+    font-size: small;
+    justify-content: space-between; 
+  }
+  
+  .forecast ul{
+    padding: 0%;
+  }
+  .clima-container span a {
     text-decoration: none;
-    margin: 20px;
-    padding-left: 20px;
+    color: #ffffff;
+  }
+
+  .clima-container {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: space-around;
-    color: black;
-    text-decoration: none;
-    
-    
-}
-
-.grados {
-    color: white;
-    font-weight: bolder;    
-    font-size: x-large;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border: black solid 1px;
-    display: inline-flex;
-    text-align:end ;
-    text-decoration: none;
-    height: 107px;
-    width: 150px;
+    color: rgb(255, 255, 255);
+    margin: 12px;
+    background: linear-gradient(#98ded4, #85b5ca);
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    height: 500px;  
+    width: 300px;
+  }
+  
+  .nameLocation {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    display: flex;
     align-items: center;
+    margin-bottom: 10px;
     justify-content: center;
-}
+  }
+  
+  .weather-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .mainTemperature {
+    font-size: 100px;
+    margin-bottom: 10px;
+  }
+
+  .temperature {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .forecast {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .day {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .more {
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .feels_like{
+    font-size: 19px;
+  }
+  
