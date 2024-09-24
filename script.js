@@ -1,5 +1,5 @@
 //con el que se puede consumir la siguiente URL 
-const urlBase = 'http://api.openweathermap.org/data/2.5/forecast'
+const urlBase = 'https://api.openweathermap.org/data/2.5/forecast'
 
 // Objeto con las coordenadas (Latitud y Longitud) de los lugares:
 let coordenadasLugaresDeEscalada = {
