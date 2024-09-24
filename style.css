@@ -7,7 +7,7 @@ body {
     height: 100vh;
     /* background: linear-gradient(to bottom, #83e9fe, #5EA4A9);
      */
-    background: wheat;
+    background: #c9b590;
   }
   
 .mainDiv {
@@ -93,4 +93,3 @@ body {
   .feels_like{
     font-size: 19px;
   }
-  

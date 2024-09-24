@@ -22,7 +22,7 @@ function crearPeticioens(object) {
             const element = object[key]
             const latitud = element[0];
             const longitud = element[1];
-            const peticion = `${urlBase}?lat=${latitud}&lon=${longitud}&appid=${API_KEY}&units=metric`;
+            const peticion = `${urlBase}?lat=${latitud}&lon=${longitud}&appid=${process.env.API_KEY}&units=metric`;
             peticiones.push(peticion);            
         }
     }
