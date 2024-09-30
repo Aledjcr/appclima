@@ -47,10 +47,10 @@ function fetchWeatherData(urls) {
                         <div class="nameLocation">
                             <span>${data.city.name}</span>
                         </div>
-                        <div class="weather-icon"> 
-                        <span class="feels_like">Sensacion termica ${Math.round(data.list[0].main.feels_like)}° </span>
-                        
+                        <div class="weather-icon">
+                         
                         </div>
+                        <span class="feels_like">Sensacion termica ${Math.round(data.list[0].main.feels_like)}° </span>
                         <div class="mainTemperature">
                             ${
                                 Math.round(data.list[0].main.temp)}°

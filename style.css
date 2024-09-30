@@ -5,13 +5,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background: linear-gradient(to bottom, #83e9fe, #5EA4A9);
+    /* background: linear-gradient(to bottom, #c4e7fc, #a9b5a6);
      */
-    background: #c9b590;
+    background: #006068;
   }
   
-.mainDiv {
-    display: flex;
+.mainDiv {    
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
   .forecast ul li {
@@ -55,6 +57,14 @@ body {
   }
   
   .weather-icon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    max-width: 100%;
+    max-height: 30%;
+    justify-content: center;
+
     font-size: 48px;
     margin-bottom: 20px;
   }
@@ -93,3 +103,14 @@ body {
   .feels_like{
     font-size: 19px;
   }
+
+@media(max-width: 992px){
+ .mainDiv {
+  width: 80%;
+ }
+}
+@media(max-width: 768px){
+.mainDiv {
+  width: 60%;
+ }
+}
