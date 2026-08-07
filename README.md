@@ -1,13 +1,72 @@
-En la escalada deportiva es importante evaluar cada factor para hacer el deporte de manera segura y por que no divertida!
- Es por esto que idealmente en la planificacion de un día de escalada se toma en cuenta el pronostico del clima del lugar al que se planea ir.
+# AppClima React V2
+Rediseño de la aplicación original de clima para escalada. La nueva versión usa React + Vite y organiza el proyecto siguiendo el flujo:
 
-  Por este motivo he decidido agrupar en una modesta web, algunos de los lugares mas conocidos y elegidos para practicar la escalada deportiva, en dicha web se planea mostrar los datos principalmente del clima
-  facilitando la eleccion del sitio al cual se pretede ir, comparando las distintas temperaturas y condiciones meteorogicas de cada lugar.
+**DATA → SERVICES → HOOKS / STATE → LOGIC / UTILS → COMPONENTS → UI**
 
-  Los datos estan actualizados en tiempo real gracias la API de https://openweathermap.org/ que ofrece informacion de manera gratuita.
 
- El sitio está construido con HTML, CSS, vanilla JavaScrip, se usa tambien Webpack para hacer un build y poder hacer un despliegue en una web gratuita que permite hostear pequeños proyetos. 
 
-En el futuro se agregaran mas sitios y funcionalidades a la web! 
+## Funcionalidades incluidas
+- Mapa interactivo con Leaflet + OpenStreetMap.
+- Los cuatro spots originales: Cueva de las Brujas, Alta Gracia, La Ola y Copina hardcodeados.
+- Selección de spots desde mapa o ranking.
+- Pronóstico de OpenWeather por coordenadas.
+- Sport Score de 0 a 100 para escalada deportiva.
+- Ranking automático de spots.
+- Pronóstico de las próximas horas.
+- Mejor ventana estimada según Sport Score.
+- Alertas de lluvia, viento, humedad y temperaturas extremas.
+- Geolocalización del navegador.
+- Distancia aproximada en línea recta desde el usuario.
+- Diseño responsive para escritorio y móvil.
 
-  Agradecimientos al profe Jose Miranda por la ayuda :D
+## Requisitos
+- Node.js compatible con Vite 8.
+- Una API key de OpenWeather.
+
+## Instalación
+```bash
+npm install
+cp .env.example .env
+```
+
+Luego editá `.env`:
+
+```env
+VITE_OPENWEATHER_API_KEY=tu_api_key
+```
+
+Ejecutá:
+
+```bash
+npm run dev
+```
+
+Para generar una versión de producción:
+
+```bash
+npm run build
+```
+
+## Nota sobre la API key
+Las variables `VITE_*` se incluyen en el bundle del frontend. Para un proyecto escolar/MVP esto simplifica el desarrollo, pero no debe considerarse almacenamiento secreto. Si el proyecto evoluciona a producción, se recomienda mover el acceso a la API meteorológica a un backend o función serverless.
+
+## Estructura
+
+```text
+src/
+├── components/
+│   ├── comparison/
+│   ├── layout/
+│   ├── map/
+│   ├── ranking/
+│   ├── score/
+│   ├── spots/
+│   └── weather/
+├── data/
+├── hooks/
+├── services/
+├── styles/
+├── utils/
+├── App.jsx
+└── main.jsx
+```
